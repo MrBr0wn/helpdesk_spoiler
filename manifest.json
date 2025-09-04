@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Helpdesk conversation toggler",
+  "version": "1.0",
+  "description": "Hide/show conversation",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "css": ["spoiler.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}

@@ -1,0 +1,46 @@
+/* Стили для спойлера */
+.wiki-spoiler-container {
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wiki-spoiler-button {
+  width: 100%;
+  padding: 12px 15px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wiki-spoiler-button:hover {
+  background: linear-gradient(135deg, #5a7df9, #9266d4);
+}
+
+.wiki-spoiler-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  display: none;
+}
+
+.wiki-spoiler-content.visible {
+  display: block;
+}
+
+.spoiler-arrow {
+  transition: transform 0.3s ease;
+}
+
+.spoiler-arrow.rotated {
+  transform: rotate(180deg);
+}
