@@ -58,7 +58,7 @@
     
     // Функция для поиска и обработки div.wiki
     function processWikiElements() {
-        const wikiElements = document.querySelectorAll('div.note div.wiki');
+        const wikiElements = document.querySelectorAll('div.has-journal-message div.wiki');
         
         if (wikiElements.length > 0) {
             console.log(`Найдено ${wikiElements.length} элементов div.wiki`);
@@ -84,14 +84,14 @@
                 mutation.addedNodes.forEach(function(node) {
                     if (node.nodeType === 1) { // Element node
                         const wikiElements = node.querySelectorAll ? 
-                            node.querySelectorAll('div.note div.wiki') : [];
+                            node.querySelectorAll('div.has-journal-message div.wiki') : [];
                         
                         if (wikiElements.length > 0) {
                             wikiElements.forEach(createSpoiler);
                         }
                         
                         // Если сам добавленный node является div.wiki
-                        if (node.matches && node.matches('div.note div.wiki')) {
+                        if (node.matches && node.matches('div.has-journal-message div.wiki')) {
                             createSpoiler(node);
                         }
                     }
